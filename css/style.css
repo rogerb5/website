@@ -90,6 +90,7 @@ section.photo2 {
 .bx-wp {
     overflow: hidden;
     will-change: transform;
+    position: relative;
 }
 
 .bx-pic {
@@ -99,7 +100,7 @@ section.photo2 {
 }
 
 .project-link {
-    padding: 1em;
+    padding: 0.4em;
     width: 50%;
     background-color: var(--third-color);
     color: black;
@@ -126,7 +127,6 @@ section.photo2 {
     z-index: 3;
     border-left: 3px solid var(--third-color);
 }
-
 
 .menutog2 {
     position: fixed;
