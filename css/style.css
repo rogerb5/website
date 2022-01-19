@@ -40,7 +40,9 @@ body {
     background-color: var(--main-color);
     color: var(--secondary-color);
     padding-bottom: 100px;
+    transition-duration: 500ms;
 }
+
 
 header {
     background-color: var(--third-color);
@@ -58,6 +60,7 @@ header, section {
 section.about {
     background-color: var(--secondary-color);
     color: var(--main-color);
+    min-height: 240px;
 }
 
 .p-text {
@@ -66,7 +69,7 @@ section.about {
 }
 
 section.photo1 {
-    background-color: #171717;
+    background-color: var(--main-color);
     z-index: 2;
 }
 
@@ -79,7 +82,9 @@ section.photo2 {
     color: var(--secondary-color);
     letter-spacing: 1px;
     font-size: 2em;
+    text-align: center;
 }
+
 .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -123,9 +128,9 @@ section.photo2 {
 .menutog {
     position: fixed;
         top: 50%;
-        left: 0;
+        right: 0;
     z-index: 3;
-    border-left: 3px solid var(--third-color);
+    border-left: 4px solid var(--third-color);
 }
 
 .menutog2 {
@@ -133,12 +138,12 @@ section.photo2 {
         top: 50%;
         right: 0;
     z-index: 3;
-    border-right: 3px solid var(--third-color);
+    border-left: 4px solid var(--third-color);
 }
 
 .btn,.btn2 {
     border: 0;
-    width:  20px;
+    width:  18px;
     min-height: 30px;
     background-color: var(--secondary-color);
     width: 100%;
@@ -172,7 +177,7 @@ section.photo2 {
     justify-content: center;
     padding: 3em;
     transform: translate3d(0px, -100%, 0px);
-    transition: 0.2s;
+    transition: transform 500ms;
     opacity: 0;
 }
 
@@ -243,6 +248,20 @@ footer {
     min-height: 100px;
     z-index: 1;
     color: black;
+}
+
+span {
+    animation: colorChange 3s ease-in infinite;
+}
+
+@keyframes colorChange {
+    50% {
+        color: blue;
+    }
+
+    70% {
+        color: rebeccapurple;
+    }
 }
 
 @media screen and (max-width: 600px) {
