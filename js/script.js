@@ -24,7 +24,7 @@ function openMenu() {
     links.forEach((link, idx) => {
         setTimeout(() => {
             link.classList.add('active');
-        }, idx * 100)
+        }, idx * 50)
     })
 }
 
