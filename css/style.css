@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    line-height: 1.5;
 }
 
 /* General Settings */
@@ -282,6 +283,10 @@ footer {
     .main {
         grid-template-columns: 1fr;
         padding: 1em;
+    }
+
+    .p-text {
+        font-size: 1.4rem;
     }
 }
 
