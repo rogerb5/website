@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav,
+footer {
+    color: #444;
+    padding: 25px;
+    animation: slideIn .8s linear, fadeIn 1s ease-in;
+}
+
+strong {
+    color: #DF57BC;
+}
+
+.name-intro {
+    font-size: 30px;
+}
+
+.nav-intro {
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+}
+
+/* Holds all cards */
+.card-container {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+/* Card properties */
+.card {
+    box-shadow:0px 4px 2px 0 hsla(0 , 0%, 0%, 0.2);
+    animation: slideIn .8s linear, fadeIn 1s ease-in;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    background: hsl(220, 12%, 95%);
+    color: #444;
+}
+
+.name {
+    padding: .5rem;
+    line-height: 1.6em;
+}
+
+/* Placement of loader */
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+}
+
+/* Box Animation */
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(400px);
+        animation-timing-function: ease-out;
+    }
+    60% {
+        transform: translateY(-50px);
+        animation-timing-function: ease-in;
+    }
+    80% {
+        transform: translateY(10px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* Loader settings */
+
+/**********
+**************
+***************
+Begin Loader Code
+*********************************
+*****************************************/
+
+/******* Loader #1: to the left x2 **********/
+.loader-1 {
+    background-color: #EF476F;
+}
+
+.to-the-left {
+    background-color: #F4F4ED;
+    width: 25px;
+    height: 25px;
+    animation: spinner 2s ease infinite;
+}
+
+@keyframes spinner {
+    50%{
+        transform: rotate(180deg);
+    }
+}
+
+/******* Loader #2: I can jump **********/
+.loader-2 {
+    background-color: #06D6A0; 
+}
+
+.i-can-jump {
+    background-color: #F4F4ED;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    animation: jumpy .4s ease infinite;
+}
+
+@keyframes jumpy {
+    25%{
+        transform: translateY(5px);
+    }
+}
+
+/******* Loader #3: I'm a circle, I'm a square **********/
+.loader-3 {
+    background-color: #FF8552; 
+}
+
+.i-am-circle-square {
+    background-color: #F4F4ED;
+    width: 25px;
+    height: 25px;
+    animation: flip 1s ease infinite;
+}
+
+@keyframes flip {
+    50%{
+        border-radius: 12px;
+    }
+}
+
+/******* Loader #4: Tic-tacs **********/
+.loader-4 {
+    background-color: #26547C
+}
+
+.static {
+    background-color: #F4F4ED;
+    width: 15px;
+    height: 25px;
+    border-radius: 7px;
+    animation: static .7s ease infinite;
+}
+
+@keyframes static {
+    50%{
+        transform: rotate(180deg);
+    }
+}
+
+/******* Loader #5: Rectasquare **********/
+.loader-5 {
+    background-color: #07BEB8
+}
+
+.recta-square {
+    background-color: #F4F4ED;
+    width: 25px;
+    height: 25px;
+    animation: real 1s ease infinite;
+}
+
+@keyframes real {
+    50%{
+        height: 5px;
+    }
+}
+
+/******* Loader #6: Now you see me **********/
+.loader-6 {
+    background-color: #E9D758 
+}
+
+.now-u-see-me {
+    background-color: #F4F4ED;
+    animation: fast 3s ease infinite;
+    width: 25px;
+    height: 25px;
+}
+
+@keyframes fast {
+    50%{
+        transform: rotate(260deg);
+        background: transparent;
+    }
+}
+
+/******* Loader #7: Tri-Spinner **********/
+.loader-7 {
+    background-color: #B8B8FF;
+}
+
+.tri-spinner {
+    border-bottom: 25px solid #F4F4ED;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	height: 0;
+    animation: theSeventh .5s ease infinite;
+}
+
+@keyframes theSeventh {
+    50%{
+        transform: rotate(0deg);
+        border-left: 0px solid transparent;
+        border-right: 0px solid transparent;
+    }
+}
+
+/******* Loader #8: Line up **********/
+.loader-8 {
+    background-color: #F03A47;
+}
+
+.eigth {
+    width: 20px;
+	height: 25px;
+	transform: skew(20deg);
+    border-style:  dotted;
+    border-left-color: #fff;
+    border-top: 10px;
+    border-bottom: 1px;
+    animation: theEigth 3s ease-in-out infinite;
+}
+
+@keyframes theEigth{
+    50%{
+        transform: rotate(31deg);
+    }
+}
+
+/******* Loader #9: Line up **********/
+.loader-9 {
+    background-color: #4C4B63;
+}
+
+.follow-me {
+    width: 15px;
+    height: 15px;
+    border-radius: 25px;
+    background-color: #F4F4ED;
+    animation: theNinth 1s  ease-out infinite;
+}
+
+@keyframes theNinth {
+    75% {
+        transform: translateX(-24px);
+    }
+}
+
+.f-part-3 {
+    animation: followMe 1s ease infinite;
+}
+
+@keyframes followMe {
+    50% {
+        transform:translateX(-87px);
+    }
+}
+
+/******* Loader #10: Line up **********/
+.loader-10 {
+    background-color: #DF57BC;
+}
+
+
+.ten {
+    width: 15px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: #F4F4ED;
+}
+
+.ten-part-1 {
+    transform: rotate(-50deg);
+    margin-right: -7px;
+    border-bottom-left-radius: 2px;
+}
+
+.ten-part-2 {
+    transform: rotate(50deg);
+    margin-left: 1px;
+    border-bottom-right-radius: 1px;
+    animation: theTenth 3s steps(2) infinite;
+}
+
+@keyframes theTenth {
+    75% {
+        transform: translateX(15px);
+    }
+}
