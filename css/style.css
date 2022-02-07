@@ -26,13 +26,12 @@ a {
     text-decoration: none;
 }
 
-
 li {
     margin-left: 20px;
 }
+
 ul {
     list-style-type: circle;
-    margin-left: 20px;
 }
 
 
@@ -309,8 +308,9 @@ footer {
     .bx {
         grid-template-columns: 1fr;
         row-gap: 4em;
-        grid-template-rows: 150px;
     }
+
+
     #sample-two {
         grid-area: 1 / 1 / 2 / 2;
     }
