@@ -1,66 +1,78 @@
-"use strict";
+// Define global variables
+var start = randomNumbers();
+var points = 0;
 
-const openModal = document.querySelector('[data-create]');
-const exitModal = document.querySelector('[data-close]');
-const saveBtn = document.querySelector('#save');
+// Initialize the point counter
+updateCounter();
 
-openModal.addEventListener('click', showModal);
-exitModal.addEventListener('click', closeModal);
-saveBtn.addEventListener('click', saveCard);
+function randomNumbers() {
+    firstNumber = Math.round(Math.random() * 12);
+    secondNumber = Math.round(Math.random() * 12);
+    answer = firstNumber * secondNumber;
+    let equation = document.querySelector('#equation').textContent
+        = (firstNumber + ' x ' + secondNumber + ' = ');
+}
 
-
-function saveCard() {
-    let questionArea = document.querySelector('#question');
-    let answerArea = document.querySelector('#answer');
-    let showAlert = document.querySelector('.show-error-message');
-    if (questionArea = null || questionArea.value == '') {
-        if (answerArea = null || answerArea.value == '') {
-            showAlert.classList.remove("hide-error");
-        }
-        setTimeout(() => {
-            showAlert.classList.add("hide-error");
-        }, 2000);
+function disappear() {
+    form = document.querySelector('#myForm');
+    form.reset();
+    if (answer != inputNumber) {
+        document.querySelector('#correct').textContent = ('');
     } else {
-        closeModal();
-        createFlashCard();
-        clearInput();
+        document.querySelector('#incorrect').textContent = ('');
     }
 }
 
-function showModal(e) {
-    let modal = document.querySelector('.modal-design');
-    modal.classList.remove("is-hidden");
+onsubmit = function grabAnswer() {
+    myForm.onsubmit = checkAnswer;
+    return false;
+};
+
+function checkAnswer() {
+    inputNumber = document.querySelector('#inputNumber').value;
+    if (answer == inputNumber) {
+        document.querySelector('#correct').textContent = ('Correct!');
+        addPoints(1);
+    } else if (inputNumber == '') {
+        alert('Please enter value');
+    } else {
+        document.querySelector('#incorrect').textContent = (
+            'Incorrect: ' + firstNumber + ' x ' + secondNumber + ' = ' + answer);
+        subtractPoints(1);
+    }
+    disappear();
+    randomNumbers();
+    milestone();
 }
 
-function closeModal() {
-    let modal = document.querySelector('.modal-design');
-    modal.classList.add('is-hidden');
+/* ---------- POINTS ---------- */
+
+// UPDATE THE COUNTER
+function updateCounter() {
+    document.querySelector('#counter').textContent = (points);
 }
 
-function clearInput() {
-    document.querySelector('.question-text').value = '';
-    document.querySelector('.answer-text').value = '';
+//  ADD POINTS
+function addPoints(number) {
+    points += number;
+    updateCounter();
 }
 
-function createFlashCard() {
-    let questionText = document.querySelector('.question-text').value;
-    let answerText = document.querySelector('.answer-text').value;
-    let cardSection = document.querySelector('.card-container');
-    let createArticle = document.createElement('article');
+//  SUBTRACT POINTS
+function subtractPoints(number) {
+    if (points <= 0) { // Subtract points, but not below 0
+        points = 0;
+    } else {
+        points -= number;
+    }
+    updateCounter();
+}
 
-    createArticle.className += "card";
-    createArticle.innerHTML = `
-    <div class="card-question-button">
-        <h4 id="title">${questionText}</h4>
-        <button id="show">x</button>
-    </div>
-    <div id="answer-card">
-        <p id="answer-card-p">${answerText}</p>
-    </div>`
-        ;
-    cardSection.append(createArticle);
-    createArticle.addEventListener('click', function (e) {
-        let questions = e.target.parentElement;
-        questions.classList.toggle("show-text");
-    })
+function milestone() {
+    if (points == 50) {
+        alert('Amazing job! Keep up the good work');
+    }
+    if (points == 100) {
+        alert('You are a master.');
+    }
 }
