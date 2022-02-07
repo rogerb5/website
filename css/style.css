@@ -11,7 +11,7 @@
 :root {
     --main-color: #121212;
     --secondary-color: whitesmoke;
-    --third-color: rgb(159, 203, 245);
+    --third-color: lightgrey;
     --main-padding: 1em;
     --secondary-padding: 0.7em;
     --main-fs: 1em;
@@ -27,13 +27,10 @@ a {
 }
 
 ul {
-    list-style-type: none;
+    list-style-type: circle;
+    margin-left: 20px;
 }
 
-li {
-    list-style-type: none;
-    font-size: 1.333rem;
-}
 
 img {
     width: 100%;
@@ -67,6 +64,7 @@ span {
 header {
     background-color: var(--third-color);
     height: 140px;
+    color: #333;
 }
 
 header, section {
@@ -79,14 +77,14 @@ header, section {
 
 /************ Section Styles **********************/
 section.about {
-    background-color: var(--secondary-color);
-    color: var(--main-color);
+    background-color: #333;
+    color: whitesmoke;
 }
 
 .p-text {
-   font-size: 1.8rem;
+   font-size: 1.3rem;
    padding: 0em;
-   color: var(--main-color);
+   color: whitesmoke;
 }
 
 section.photo1 {
@@ -102,16 +100,31 @@ section.photo2 {
 .project {
     color: var(--secondary-color);
     letter-spacing: 1px;
-    font-size: 2em;
-    text-align: center;
+    font-size: 1.7em;
+
 }
 
-.main {
+
+.bx {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 4em;
-    column-gap: 2em;
+    column-gap: 4rem;
+    min-height: 500px;
+    margin-bottom: 20px;
 }
+
+
+#sample-two {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.sample {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
 
 .bx-wp {
     overflow: hidden;
@@ -287,6 +300,15 @@ footer {
 
     .p-text {
         font-size: 1.4rem;
+    }
+
+    .bx {
+        grid-template-columns: 1fr;
+        row-gap: 4em;
+        grid-template-rows: 150px;
+    }
+    #sample-two {
+        grid-area: 1 / 1 / 2 / 2;
     }
 }
 
