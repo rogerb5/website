@@ -124,8 +124,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    pointer-events: none;
     transition: 0.5s;
+    touch-action: manipulation;
   }
   
   .menu.active {

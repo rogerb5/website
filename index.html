@@ -11,35 +11,91 @@
 </head>
 
 <body>
+
     <header>
-        <h1>Roger B</h1>
-        <h2>web developer & designer</h2>
+        <h1 class="name">Roger B</h1>
+        <h2 class="title">web developer & designer</h2>
     </header>
 
     <section class="about">
-        <p class="p-text">I develop efficent, usable, and custom websites using javascript. I also
-            dabble with design software to create logos, and posters. Please contact me through email
+        <h3 class="about">About</h3>
+        <p class="p-text">
+            I construct efficent, usable, and custom websites/games using javascript. <br><br>With
+            design software I create logos, and posters too. <br><br>Please contact me through email
             rogerdavidb57[at]gmail.com
         </p>
     </section>
 
     <section class="photo photo1">
         <section class="main">
-            <h3 class="project">Selected Projects</h3>
-            <article class="section s-1">
-                <div class="bx-wp">
-                    <img src="img/1.jpg" alt="A Gallery Screen shot" class="bx bx-pic">
-                    <a class="project-link r-link" href="complex.html">Photography Template</a>
+            <div class="bx" id="first-box">
+                <div class="sample">
+                    <a href="complex.html" class="project">1) Photography Template</a>
+                    <p class="p-des">
+                        This website provides a minimalistic setup to show your pictures.
+                    </p>
+                    <ul class="tech-list">
+                        <li>Functional JavaScript LightBox</li>
+                        <li>CSS animations</li>
+                        <li>Grid layout</li>
+                    </ul>
                 </div>
-            </article>
 
-            <article class="section s-2">
-                <div class="bx-wp">
-                    <img src="img/2.jpg" alt="Menu Picture" class="bx bx-pic">
-                    <a class="project-link l-link" href="auto.html">Gallery Website</a>
+                <article class="section s-1">
+                    <div class="bx-wp">
+                        <img src="img/1.jpg" alt="A Gallery Screen shot" class="bx bx-pic">
+                        <a class="project-link r-link" href="complex.html">Photo Template</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="bx" id="second-box">
+                <div class="sample" id="sample-two">
+                    <a href="auto.html" class="project">2) Gallery Website</a>
+                    <p class="p-des">
+                        An auto scroll website that displays images sourced from unsplash[dot]com
+                    </p>
+                    <ul class="tech-list">
+                        <li>Request animation frame</li>
+                        <li>Intersection Observer API</li>
+                        <li>Marquee Animation</li>
+                    </ul>
                 </div>
-            </article>
 
+                <article class="section s-2">
+                    <div class="bx-wp">
+                        <img src="img/2.jpg" alt="Menu Picture" class="bx bx-pic">
+                        <a class="project-link l-link" href="auto.html">Gallery Website</a>
+                    </div>
+                </article>
+            </div>
+
+
+            <div class="bx" id="first-box">
+                <div class="sample">
+                    <a href="flash.html" class="project">3) Multiplication Game</a>
+                    <p class="p-des">
+                        A desktop version game made to teach the multiplication tables ranging from 1 through 12
+                    </p>
+                    <ul class="tech-list">
+                        <li>Uses the Math.Random() class</li>
+                        <li>Functional Programming</li>
+                        <li>Future Updates Coming soon!</li>
+                    </ul>
+                </div>
+
+                <article class="section s-2">
+                    <div class="bx-wp">
+                        <img src="img/3.jpg" alt="A Tree" class="bx bx-pic">
+                        <a class="project-link r-link" href="flash.html">Multiply Guess</a>
+                    </div>
+                </article>
+            </div>
+
+
+
+
+            <!-- 
             <article class="section s-2">
                 <div class="bx-wp">
                     <img src="img/3.jpg" alt="A Tree" class="bx bx-pic">
@@ -47,31 +103,38 @@
                 </div>
             </article>
 
-            <!--<article class="section s-2">
+            <article class="section s-2">
                 <div class="bx-wp">
                     <img src="img/4.jpg" alt="A Tree" class="bx bx-pic">
+                    <a class="project-link r-link" href="loaders.html">CSS loaders</a>
                 </div>
             </article>-->
 
         </section>
+        <article class="menutog">
+            <button class="btn">=</button>
+        </article>
     </section>
 
-    <article class="menutog">
-        <button class="btn">=</button>
-    </article>
-
-    <main class="m-overlay">
+    <aside class="m-overlay">
+        <article class="card">
+            <div class="loader loader-10">
+                <span class="ten ten-part-1"></span>
+                <span class="ten ten-part-2"></span>
+            </div>
+        </article>
         <div class="info-grid">
 
             <article class="gr education">
-                <div class="about">
+                <ul class="about">
                     <h3 class="education li">Education</h3>
-                    <h4 class="school li">BCS Computer Science</h4>
-                    <h5 class="school li">E.W.U. Graduation: Class of 2023</h5>
-                </div>
+                    <li class="li">E.W.U.</li>
+                    <li class="school li">BCS Computer Science</li>
+                    <li class="school li">Class of 2023</li>
+                </ul>
             </article>
 
-            <article class="gr">
+            <article class="gr sk">
                 <ul class="skills">
                     <h3 class="skills-t li">Technical</h3>
                     <li class="li">javascript</li>
@@ -82,7 +145,7 @@
             </article>
 
 
-            <article class="gr">
+            <article class="gr sf">
                 <ul class="software">
                     <li class="li">inDesign</li>
                     <li class="li">photoshop</li>
@@ -96,14 +159,17 @@
                 <a class="out-l" href="https://github.com/rogerb5">GitHub</a>
                 <a class="out-l" href="">Behance</a>
             </article>
+
+
         </div>
+
         <article class="menutog2">
             <button class="btn2">x</button>
         </article>
-    </main>
+    </aside>
 
     <footer>
-        <p> &#169; Made in 2022, U.S.A. :)</p>
+        <p> &#169; Made in 2022 by RB. All work my own.</p>
     </footer>
 
     <script src="js/script.js">
